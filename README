@@ -262,7 +262,7 @@ RCWSD ?= "R_SQPH_0x85be/rcw_1300"
 RCWXSPI ?= "R_SQPH_0x85be/rcw_1300"
 RCWEMMC ?= "R_SQPH_0x85be/rcw_1300"
 
-Open file <project-path>/layers/meta-qoriq/recipes-bsp/secure-boot/secure-boot-qoriq/ls1028ardb.manifest,
+Open file <project-path>/layers/meta-qoriq/meta-qoriq-bsp/recipes-bsp/secure-boot/secure-boot-qoriq/ls1028ardb.manifest,
 and then set rcw related variable as below.
 rcw_xspi=rcw/ls1028ardb/R_SQPH_0x85be/rcw_1300.bin
 rcw_sd=rcw/ls1028ardb/R_SQPH_0x85be/rcw_1300.bin
@@ -629,7 +629,7 @@ RCWSD ?= "R_SQPH_0x85be/rcw_1300"
 RCWXSPI ?= "R_SQPH_0x85be/rcw_1300"
 RCWEMMC ?= "R_SQPH_0x85be/rcw_1300"
 
-Open file <project-path>/layers/meta-qoriq/recipes-bsp/secure-boot/secure-boot-qoriq/ls1028ardb.manifest,
+Open file <project-path>/layers/meta-qoriq/meta-qoriq-bsp/recipes-bsp/secure-boot/secure-boot-qoriq/ls1028ardb.manifest,
 and then set rcw related variable as below.
 rcw_xspi=rcw/ls1028ardb/R_SQPH_0x85be/rcw_1300.bin
 rcw_sd=rcw/ls1028ardb/R_SQPH_0x85be/rcw_1300.bin
@@ -837,9 +837,9 @@ and then build WRLinux image as usual.
 	BB_NO_NETWORK = '0'
 	ACCEPT_FSL_EULA = "1"
 	CUSTOMER_BUILD_BOOTLOADER = "1"
-	CUSTOMER_RECIPES:meta-qoriq += 'secure-boot-qoriq'
-	CUSTOMER_RECIPES:meta-qoriq += 'u-boot-qoriq'
-	CUSTOMER_RECIPES:meta-qoriq += 'qoriq-atf'
+	CUSTOMER_RECIPES:qoriq-bsp-release += 'secure-boot-qoriq'
+	CUSTOMER_RECIPES:qoriq-bsp-release += 'u-boot-qoriq'
+	CUSTOMER_RECIPES:qoriq-bsp-release += 'qoriq-atf'
 	CUSTOMER_RECIPES:freescale-layer += 'dp-firmware-cadence'
 	CUSTOMER_RECIPES:freescale-layer += 'qoriq-cst-native'
 	CUSTOMER_RECIPES:freescale-layer += 'uefi'
