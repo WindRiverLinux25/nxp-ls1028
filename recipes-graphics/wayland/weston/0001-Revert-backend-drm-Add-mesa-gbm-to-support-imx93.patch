@@ -8,6 +8,8 @@ This reverts commit 2eb89930f839a516f26400cde7888fdb8cef860b.
 This patch is not compatible with nxp-ls1028 platform, because
 the libgbm is installed in usr/lib64.
 
+Upstream-Status: Inappropriate [WRLinux specific]
+
 Signed-off-by: Meng Li <Meng.Li@windriver.com>
 ---
  libweston/backend-drm/drm-internal.h | 2 --
