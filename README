@@ -744,10 +744,10 @@ Customer needs to build graphics features manually with below steps.
 	PREFERRED_PROVIDER_virtual/libgles3 = "imx-gpu-viv"
 	PREFERRED_PROVIDER_virtual/egl      = "imx-gpu-viv"
 	PREFERRED_PROVIDER_virtual/opencl-icd = "imx-gpu-viv"
-	PREFERRED_VERSION_weston = "12.0.4.imx"
-	PREFERRED_VERSION_wayland-protocols = "1.32.imx"
-	PREFERRED_VERSION_libdrm = "2.4.116.imx"
-	PREFERRED_VERSION_xwayland = "23.2.5.imx"
+	PREFERRED_VERSION_weston = "14.0.1.imx"
+	PREFERRED_VERSION_wayland-protocols = "1.37.imx"
+	PREFERRED_VERSION_libdrm = "2.4.123.imx"
+	PREFERRED_VERSION_xwayland = "24.1.6.imx"
 
 	CUSTOMER_RECIPES:freescale-layer += 'xwayland'
 
