@@ -762,6 +762,7 @@ Customer needs to build graphics features manually with below steps.
 	CUSTOMER_RECIPES:fsl-sdk-release += 'libxdg-shell'
 	CUSTOMER_RECIPES:fsl-sdk-release += 'gputop'
 	CUSTOMER_RECIPES:fsl-sdk-release += 'libgpuperfcnt'
+	CUSTOMER_RECIPES:fsl-bsp-release += 'linux-imx-headers'
 
 	CUSTOMER_RECIPES:freescale-distro += 'packagegroup-fsl-tools-gpu'
 	CUSTOMER_RECIPES:freescale-distro += 'packagegroup-fsl-gstreamer1.0-full'
