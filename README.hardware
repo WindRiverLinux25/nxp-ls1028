@@ -21,8 +21,8 @@ This BSP supports the following boards:
 2. Change History
 =================
 
-  - 2024/08 (LINUXPG-2272): Wind River Linux 10.24 RCPL01. Standard and preempt-rt
-		       based on NXP Layerscape Linux Distribution POC L6.6.3-1.0.0.
+  - 2025/10 (LINUXPG-2745): Wind River Linux 10.25 RCPL02. Standard and preempt-rt
+		       based on NXP Layerscape Yocto SDK ls-6.12.3-1.0.0.
 
 3. BSP Features
 ===============
@@ -92,7 +92,7 @@ in a different environment it may possibly have some issues.
 	Processor:		LS1028AE Rev1.0 (0x870b0010)
 	Board:			LS1028AE Rev1.0-RDB, Version: A
 	BootLoader:		U-Boot
-	BootLoader Version:	U-Boot 2023.04+gf8a2983ec8+p0 (Mar 04 2024 - 07:25:04 +0000)
+	BootLoader Version:	U-Boot 2024.04+fsl+ge3219a5a+p0 (Feb 18 2025 - 04:03:02 +0000)
 
 Here is the board link:
   https://www.nxp.com/support/developer-resources/software-development-tools/qoriq-developer-resources/ls1028a-reference-design-board:LS1028ARDB
