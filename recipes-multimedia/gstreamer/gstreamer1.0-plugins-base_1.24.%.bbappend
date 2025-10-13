@@ -1,2 +1,2 @@
 COMPATIBLE_MACHINE:nxp-ls1028 = "nxp-ls1028"
-DEPENDS:append:nxp-ls1028 = " linux-imx-headers"
+DEPENDS:append:nxp-ls1028:imxgpu = " linux-imx-headers"
