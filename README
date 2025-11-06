@@ -141,9 +141,64 @@ consoledev=ttyS0
 baudrate=115200
 othbootargs=earlycon=uart8250,mmio,0x21c0500
 
-Note:
-  Currently, ls1028ardb board supports three boot modes, user can select
-  one of them via setting corresponding DIP switch.
+4.2 Booting from supported options
+----------------------------------
+
+4.2.1 On-Board Configurations
+
+The LS1028ARDB provides the following storage options for storing
+images (RCW/UBoot/kernel/PPA/FMan microcode):
+
+	- FSPI NOR flash memory (part number: MT35XU02GCBA1G12-0SITES)
+	- eMMC memory (part number: MTFC8GAKAJCN-1M)
+	- eSDHC interface for SD card
+
+The following description shows the memory addresses (memory map) for
+storing board configuration data on flash or eMMC/SD.
+
+4.2.2 NXP bootloader image
+
+WRLinux product provides a solution to build bootloader images that contain
+U-Boot, RCW, etc. Please refer to section 7 for instructions on building
+the NXP bootloader image.
+
+After building, the bootloader image(firmware_ls1028ardb_uboot_<boot-type>.img)
+is generated in directory <building-path>/build/tmp-glibc/deploy/images/nxp-ls1028.
+
+To burn the image to the target board under the U-Boot prompt, use the commands below:
+
+For NOR Flash:
+	=> tftp a0000000 firmware_ls1028ardb_uboot_xspiboot.img
+	=> sf probe 0:0
+	=> sf erase 0 + $filesize && sf write a0000000 0 $filesize
+
+	Then use
+
+	=> qixis_reset
+
+	to reset and boot the board from FSPI NOR Flash.
+
+For eMMC:
+	=> tftp a0000000 firmware_ls1028ardb_uboot_emmcboot.img
+	=> mmc dev 1;mmc write a0000000 8 1fff8
+
+	Then use
+
+	=> qixis_reset emmc
+
+	to reset and boot the board from eMMC.
+
+For SD card:
+	=> tftp a0000000 firmware_ls1028ardb_uboot_sdboot.img
+	=> mmc dev 0;mmc write a0000000 8 1fff8
+
+	Then use
+
+	=> qixis_reset sd
+
+	to reset and boot the board from SD.
+
+4.2.3 Set board switch
 
   Boot source	   SW2[1:8]	SW3[1:8]	SW5[1:8]
   FSPI NOR  	   1111_1000	1111_0000	0011_1001
